@@ -35,11 +35,14 @@ validate_args() {
     echo "Error: grid a required argument."
     exit 1
   fi
+
+  echo ">${INPUT_TESTIMTOCKEN}< >${INPUT_GRID}<"
+
   if [ -z "${INPUT_TESTIMTOCKEN}" ]; then
     echo "Error: testimToken a required argument."
     exit 1
   fi
-  if [ -z "${INPUT_TESTIMTOCKEN}" ]; then
+  if [ -z "${INPUT_TESTIMPROJECT}" ]; then
     echo "Error: testimProject a required argument."
     exit 1
   fi
@@ -59,6 +62,9 @@ run_testim() {
 
 main() {
   echo "TEST!!!!"
+
+  echo ">${INPUT_TESTIMTOCKEN}< >${INPUT_GRID}<"
+
   validate_args
   run_testim
 }
