@@ -63,7 +63,7 @@ run_testim() {
 main() {
   echo "TEST!!!!"
 
-  echo ">${INPUT_TESTIMTOCKEN}< >${INPUT_GRID}<"
+  echo ">${INPUT_TESTIMTOCKEN}< >${INPUT_GRID}< >${INPUT_BRANCHNAME}<"
 
   validate_args
   run_testim
