@@ -58,15 +58,15 @@ echo "testim --grid ${INPUT_GRID} \
        --branch ${INPUT_BRANCHNAME} \
        --label ${{ steps.init_inputs.outputs.label }} ${INPUT_TESTPLAN}"
 
-
-    testim --grid ${INPUT_GRID} \
-     --base-url ${INPUT_BRANCHNAME} \
-     --parallel ${INPUT_PARALLELGRIDS} \
-     --token ${INPUT_TESTIMTOCKEN} \
-     --project ${INPUT_TESTIMTOCKEN} \
-     --params "{\"skipPixelValidationSteps\":${INPUT_ENABLEPIXELVALIDATION}}" \
-     --branch ${INPUT_BRANCHNAME} \
-     --label ${{ steps.init_inputs.outputs.label }} ${INPUT_TESTPLAN}
+#`
+#    testim --grid ${INPUT_GRID} \
+#     --base-url ${INPUT_BRANCHNAME} \
+#     --parallel ${INPUT_PARALLELGRIDS} \
+#     --token ${INPUT_TESTIMTOCKEN} \
+#     --project ${INPUT_TESTIMTOCKEN} \
+#     --params "{\"skipPixelValidationSteps\":${INPUT_ENABLEPIXELVALIDATION}}" \
+#     --branch ${INPUT_BRANCHNAME} \
+#     --label ${{ steps.init_inputs.outputs.label }} ${INPUT_TESTPLAN}`
 }
 
 
