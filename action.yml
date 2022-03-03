@@ -40,12 +40,12 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
+    - ${{ inputs.baseURL }}
+    - ${{ inputs.label }}
+    - ${{ inputs.testPlan }}
+    - ${{ inputs.branchName }}
+    - ${{ inputs.parallelGrids }}
+    - ${{ inputs.enablePixelValidation }}
     - ${{ inputs.testimToken }}
     - ${{ inputs.testimProject }}
     - ${{ inputs.grid }}
-    - ${{ inputs.baseURL }}
-    - ${{ inputs.branchName }}
-    - ${{ inputs.parallelGrids }}
-    - ${{ inputs.label }}
-    - ${{ inputs.testPlan }}
-    - ${{ inputs.enablePixelValidation }}
