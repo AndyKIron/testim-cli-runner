@@ -38,14 +38,14 @@ validate_args() {
 
   echo ">${INPUT_TESTIMTOCKEN}< >${INPUT_GRID}<"
 
-  if [ -z "${INPUT_TESTIMTOCKEN}" ]; then
-    echo "Error: testimToken a required argument."
-    exit 1
-  fi
-  if [ -z "${INPUT_TESTIMPROJECT}" ]; then
-    echo "Error: testimProject a required argument."
-    exit 1
-  fi
+#  if [ -z "${INPUT_TESTIMTOCKEN}" ]; then
+#    echo "Error: testimToken a required argument."
+#    exit 1
+#  fi
+#  if [ -z "${INPUT_TESTIMPROJECT}" ]; then
+#    echo "Error: testimProject a required argument."
+#    exit 1
+#  fi
 }
 
 run_testim() {
