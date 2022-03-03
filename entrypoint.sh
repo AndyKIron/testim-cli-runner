@@ -54,7 +54,6 @@ echo "testim --grid ${INPUT_GRID} \
        --parallel ${INPUT_PARALLELGRIDS} \
        --token ${INPUT_TESTIMTOCKEN} \
        --project ${INPUT_TESTIMTOCKEN} \
-       --params \"{\"skipPixelValidationSteps\":${INPUT_ENABLEPIXELVALIDATION}}" \
        --branch ${INPUT_BRANCHNAME} \
        --label ${{ steps.init_inputs.outputs.label }} ${INPUT_TESTPLAN}"
 
