@@ -1,5 +1,6 @@
 name: 'Testim.IO CLI runner'
 description: 'This action run testim.io tests'
+author: AndyKIron
 
 inputs:
   baseURL:
@@ -26,12 +27,25 @@ inputs:
     description: 'Set test plans name'
     required: false
     default: 'all'
+  grid:
+    description: 'Testim Grid'
+    required: false
+    default: 'Testim-grid'
+  testimToken:
+    required: true
+  testimProject:
+    required: true
 
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.token }}
-    - ${{ inputs.project }}
+    - ${{ inputs.testimToken }}
+    - ${{ inputs.testimProject }}
     - ${{ inputs.grid }}
-    - ${{ inputs.suite }}
+    - ${{ inputs.baseURL }}
+    - ${{ inputs.branchName }}
+    - ${{ inputs.parallelGrids }}
+    - ${{ inputs.label }}
+    - ${{ inputs.testPlan }}
+    - ${{ inputs.enablePixelValidation }}
