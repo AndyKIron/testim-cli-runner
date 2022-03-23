@@ -6,27 +6,26 @@ inputs:
   baseURL:
     description: 'Set base URL to run tests on'
     required: true
-    default: "https://fusion.ironsrc.net"
-  branchName:
-    description: 'Set branch name'
-    required: true
-    default: 'master'
-  parallelGrids:
-    description: 'Set parallel grid to run tests (1 - 32)'
-    required: false
-    default: '10'
-  label:
-    description: 'Set test label'
-    required: false
-    default: 'active'
-  enablePixelValidation:
-    description: 'Set skip pixel validation flag (true/false)'
-    required: false
-    default: 'true'
-  testPlan:
-    description: 'Set test plans name'
-    required: false
-    default: 'all'
+#  branchName:
+#    description: 'Set branch name'
+#    required: true
+#    default: 'master'
+#  parallelGrids:
+#    description: 'Set parallel grid to run tests (1 - 32)'
+#    required: false
+#    default: '10'
+#  label:
+#    description: 'Set test label'
+#    required: false
+#    default: 'active'
+#  enablePixelValidation:
+#    description: 'Set skip pixel validation flag (true/false)'
+#    required: false
+#    default: 'true'
+#  testPlan:
+#    description: 'Set test plans name'
+#    required: false
+#    default: 'all'
   grid:
     description: 'Testim Grid'
     required: false
@@ -40,12 +39,13 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.baseURL }}
-    - ${{ inputs.label }}
-    - ${{ inputs.testPlan }}
-    - ${{ inputs.branchName }}
-    - ${{ inputs.parallelGrids }}
-    - ${{ inputs.enablePixelValidation }}
     - ${{ inputs.testimToken }}
     - ${{ inputs.testimProject }}
     - ${{ inputs.grid }}
+    - ${{ inputs.baseURL }}
+
+#    - ${{ inputs.label }}
+#    - ${{ inputs.testPlan }}
+#    - ${{ inputs.branchName }}
+#    - ${{ inputs.parallelGrids }}
+#    - ${{ inputs.enablePixelValidation }}
